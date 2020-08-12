@@ -25,7 +25,7 @@ def register(request):
         else:
             fcuser = Fcuser(
                 username=username,
-                useremail=useremail,
+                # useremail=useremail,
                 password=make_password(password)
             )
 
