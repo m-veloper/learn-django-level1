@@ -16,6 +16,7 @@ class LoginForm(forms.Form):
         widget=forms.PasswordInput, label="비밀번호")
 
     def clean(self):
+        
         cleaned_data = super().clean()
         username = cleaned_data.get('username')
         password = cleaned_data.get('password')
