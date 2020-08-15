@@ -5,6 +5,7 @@ from django.contrib.auth.hashers import check_password
 
 class LoginForm(forms.Form):
     username = forms.CharField(
+        
         error_messages={
             'required': '아이디를 입력해주세요.'
         },
