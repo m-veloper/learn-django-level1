@@ -9,13 +9,13 @@ from .forms import BoardForm
 # Create your views here.
 
 
-# def board_detail(request, pk):
-#     try:
-#         board = Board.objects.get(pk=pk)
-#     except Board.DoesNotExist:
-#         raise Http404('게시글을 찾을 수 없습니다')
-#
-#     return render(request, 'board_detail.html', {'board': board})
+def board_detail(request, pk):
+    try:
+        board = Board.objects.get(pk=pk)
+    except Board.DoesNotExist:
+        raise Http404('게시글을 찾을 수 없습니다')
+
+    return render(request, 'board_detail.html', {'board': board})
 
 
 def board_write(request):
