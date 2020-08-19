@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.core.paginator import Paginator
 from django.http import Http404
 # from fcuser.models import Fcuser
+from fcuser.models import Fcuser
 # from tag.models import Tag
 from .models import Board
 from .forms import BoardForm
