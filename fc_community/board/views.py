@@ -30,6 +30,9 @@ def board_write(request):
 
             tags = form.cleaned_data['tags'].split(',')
 
+            for tag in tags:
+                pass
+
             board = Board()
             board.title = form.cleaned_data['title']
             board.contents = form.cleaned_data['contents']
