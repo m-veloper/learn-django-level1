@@ -10,10 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
+import os
 from pathlib import Path
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -24,13 +27,12 @@ SECRET_KEY = '5#bf(uza967ltv$^)13sqts_#med*$ws1)epke^buwp%har#do'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-# 서버에 올릴 떄는 디버그모드를 False로 설정해야한다.
-# DEBUG = True
-DEBUG = False
+# 서버에 올릴 떄는 디버그모드를 False로 설정해야 한다.
+DEBUG = True
+# DEBUG = False
 
-ALLOWED_HOSTS = [
-    '파이썬애니웨이계정.pythonanywhere.com'
-]
+ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = ['파이썬애니웨이계정.pythonanywhere.com']
 
 
 # Application definition
@@ -126,3 +128,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+# ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
