@@ -29,13 +29,7 @@ def board_write(request):
             fcuser = Fcuser.objects.get(pk=user_id)
 
             tags = form.cleaned_data['tags'].split(',')
-
-            for tag in tags:
-                if not tag:
-                    continue
-
-                    _tage = Tag.get_or_create(name=tag)
-
+            
             board = Board()
             board.title = form.cleaned_data['title']
             board.contents = form.cleaned_data['contents']
