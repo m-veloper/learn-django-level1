@@ -34,6 +34,8 @@ def board_write(request):
                 if not tag:
                     continue
 
+                    _tage = Tag.get_or_create(name=tag)
+
             board = Board()
             board.title = form.cleaned_data['title']
             board.contents = form.cleaned_data['contents']
