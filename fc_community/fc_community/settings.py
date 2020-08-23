@@ -23,9 +23,14 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = '5#bf(uza967ltv$^)13sqts_#med*$ws1)epke^buwp%har#do'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+# 서버에 올릴 떄는 디버그모드를 False로 설정해야한다.
+# DEBUG = True
+DEBUG = False
+
+ALLOWED_HOSTS = [
+    '파이썬애니웨이계정.pythonanywhere.com'
+]
 
 
 # Application definition

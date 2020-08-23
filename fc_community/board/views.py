@@ -29,7 +29,7 @@ def board_write(request):
             fcuser = Fcuser.objects.get(pk=user_id)
 
             tags = form.cleaned_data['tags'].split(',')
-            
+
             board = Board()
             board.title = form.cleaned_data['title']
             board.contents = form.cleaned_data['contents']
